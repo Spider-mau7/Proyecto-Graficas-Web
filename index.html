@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Mania - Inicio</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+  </head>
+<body>
+    <main class="contenedor-pagina contenedor-inicio">
+        <div class="contenedor-logo">
+            <img src="imagenes/logo.png" alt="" class="logo">
+        </div>
+        <div class="contenedor-botones" id="contenedor-botones">
+            <button class="button-ui" onclick="clickJugar()">JUGAR</button>
+            <a class="button-ui" href="config.html">AJUSTES</a>
+            <a class="button-ui" href="#">SALIR</a>
+        </div>
+
+        <div class="contenedor-botones" id="contenedor-modoJuego" style="display: none;">
+          <button class="button-ui" onclick="click1Jugador()">1 Jugador</button>
+          <button class="button-ui" onclick="clickMulti()">Multi</button>
+        </div>
+
+        <!-- BOTONES PARA SINGLE PLAYER -->
+        <div class="contenedor-botones" id="contenedor-Mapas" style="display: none;">
+          <button class="button-ui" onclick="clickMapa1()">Cancha</button>
+          <button class="button-ui" onclick="clickMapa2()">Parque</button>
+          <button class="button-ui" onclick="clickMapa3()">Calle</button>
+        </div>
+
+        <div class="contenedor-botones" id="contenedor-DificultadesMapa1" style="display: none;">
+          <a class="button-ui" href="gameplay.html?Mapa=1&Dificultad=1&GameMode=Single">Normal</a>
+          <a class="button-ui" href="gameplay.html?Mapa=1&Dificultad=2&GameMode=Single">Dificil</a>
+        </div>
+        <div class="contenedor-botones" id="contenedor-DificultadesMapa2" style="display: none;">
+          <a class="button-ui" href="gameplay.html?Mapa=2&Dificultad=1&GameMode=Single">Normal</a>
+          <a class="button-ui" href="gameplay.html?Mapa=2&Dificultad=2&GameMode=Single">Dificil</a>
+        </div>
+        <div class="contenedor-botones" id="contenedor-DificultadesMapa3" style="display: none;">
+          <a class="button-ui" href="gameplay.html?Mapa=3&Dificultad=1&GameMode=Single">Normal</a>
+          <a class="button-ui" href="gameplay.html?Mapa=3&Dificultad=2&GameMode=Single">Dificil</a>
+        </div>
+
+        <!-- BOTONES PARA MULTI PLAYER -->
+        <div class="contenedor-botones" id="contenedor-MapasM" style="display: none;">
+          <button class="button-ui" onclick="clickMapa1M()">Mapa 1</button>
+          <button class="button-ui" onclick="clickMapa2M()">Mapa 2</button>
+          <button class="button-ui" onclick="clickMapa3M()">Mapa 3</button>
+        </div>
+
+        <div class="contenedor-botones" id="contenedor-DificultadesMapa1M" style="display: none;">
+          <a class="button-ui" href="gameplayM.html?Mapa=1&Dificultad=1&GameMode=Multiplayer">Normal</a>
+          <a class="button-ui" href="gameplayM.html?Mapa=1&Dificultad=2&GameMode=Multiplayer">Dificil</a>
+        </div>
+        <div class="contenedor-botones" id="contenedor-DificultadesMapa2M" style="display: none;">
+          <a class="button-ui" href="gameplayM.html?Mapa=2&Dificultad=1&GameMode=Multiplayer">Normal</a>
+          <a class="button-ui" href="gameplayM.html?Mapa=2&Dificultad=2&GameMode=Multiplayer">Dificil</a>
+        </div>
+        <div class="contenedor-botones" id="contenedor-DificultadesMapa3M" style="display: none;">
+          <a class="button-ui" href="gameplayM.html?Mapa=3&Dificultad=1&GameMode=Multiplayer">Normal</a>
+          <a class="button-ui" href="gameplayM.html?Mapa=3&Dificultad=2&GameMode=Multiplayer">Dificil</a>
+        </div>
+    </main>
+		<script>
+    function clickJugar(){
+      const containerBotonesInicio = document.getElementById('contenedor-botones')
+      containerBotonesInicio.style.display = 'none'
+      const containerModoJuego = document.getElementById('contenedor-modoJuego')
+      containerModoJuego.style.display = 'block'
+    }
+
+    //FUNCIONES 1 JUGADOR
+    function click1Jugador(){
+      const containerModoJuego = document.getElementById('contenedor-modoJuego')
+      containerModoJuego.style.display = 'none'
+      const containerMapa = document.getElementById('contenedor-Mapas')
+      containerMapa.style.display = 'block'
+    }
+
+    function clickMapa1(){
+      const containerMapa = document.getElementById('contenedor-Mapas')
+      containerMapa.style.display = 'none'
+      const containerDificultades = document.getElementById('contenedor-DificultadesMapa1')
+      containerDificultades.style.display = 'block'
+    }
+    function clickMapa2(){
+      const containerMapa = document.getElementById('contenedor-Mapas')
+      containerMapa.style.display = 'none'
+      const containerDificultades = document.getElementById('contenedor-DificultadesMapa2')
+      containerDificultades.style.display = 'block'
+    }
+    function clickMapa3(){
+      const containerMapa = document.getElementById('contenedor-Mapas')
+      containerMapa.style.display = 'none'
+      const containerDificultades = document.getElementById('contenedor-DificultadesMapa3')
+      containerDificultades.style.display = 'block'
+    }
+
+    //FUNCIONES JUGADORES
+    function clickMulti(){
+      const containerModoJuego = document.getElementById('contenedor-modoJuego')
+      containerModoJuego.style.display = 'none'
+      const containerMapa = document.getElementById('contenedor-MapasM')
+      containerMapa.style.display = 'block'
+    }
+    function clickMapa1M(){
+      const containerMapa = document.getElementById('contenedor-MapasM')
+      containerMapa.style.display = 'none'
+      const containerDificultades = document.getElementById('contenedor-DificultadesMapa1M')
+      containerDificultades.style.display = 'block'
+    }
+    function clickMapa2M(){
+      const containerMapa = document.getElementById('contenedor-MapasM')
+      containerMapa.style.display = 'none'
+      const containerDificultades = document.getElementById('contenedor-DificultadesMapa2M')
+      containerDificultades.style.display = 'block'
+    }
+    function clickMapa3M(){
+      const containerMapa = document.getElementById('contenedor-MapasM')
+      containerMapa.style.display = 'none'
+      const containerDificultades = document.getElementById('contenedor-DificultadesMapa3M')
+      containerDificultades.style.display = 'block'
+    }
+    </script>
+</body>
+</html>
