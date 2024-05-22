@@ -4,35 +4,30 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { CharacterControls } from './CharacterControl.js';
 
 //Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
 import { 
     getAuth, 
     GoogleAuthProvider, 
     signInWithPopup, 
     signOut,
     FacebookAuthProvider 
-} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js";
 import { 
     getDatabase, 
     ref, 
     onValue,
     set
-} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+} from "https://www.gstatic.com/firebasejs/10.12.1/firebase-database.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
 
-    apiKey: "AIzaSyAu7KPLa2vQ_HDXEC25WCXh-A4a4gZVS4A",
-  
-    authDomain: "piagraficasweb-5905f.firebaseapp.com",
-  
-    projectId: "piagraficasweb-5905f",
-  
-    storageBucket: "piagraficasweb-5905f.appspot.com",
-  
-    messagingSenderId: "82150438327",
-  
-    appId: "1:82150438327:web:2750244f471b1c55bb6432"
+    apiKey: "AIzaSyBQA89MX8JktpW48oWJtWus4U44nwmLbIs",
+    authDomain: "graficas-web-9c326.firebaseapp.com",
+    projectId: "graficas-web-9c326",
+    storageBucket: "graficas-web-9c326.appspot.com",
+    messagingSenderId: "10905086848",
+    appId: "1:10905086848:web:c2c97bc57974f1cb192f65"
   
   };
 
