@@ -16,7 +16,7 @@ a {
     color: #FFFFFF;
     cursor: pointer;
     display: inline-block;
-    font-family: 'Titan One', cursive;
+    font-family: "Jersey 15", sans-serif;
     font-size: 30px;
     font-weight: 400;
     letter-spacing: 3px;
@@ -24,7 +24,7 @@ a {
     margin: 0;
     outline: none;
     overflow: visible;
-    padding: 1em 2em;
+    padding: 1em ;
     text-align: center;
     text-transform: uppercase;
     touch-action: manipulation;
@@ -39,7 +39,7 @@ a {
 }
 .button-ui:after {
     background-clip: padding-box;
-    background-color: #3C3A8C;
+    background-color: #31E354;
     border: solid transparent;
     border-radius: 16px;
     border-width: 0 0 4px;
@@ -60,7 +60,7 @@ a {
     background-size: cover;
 }
 .contenedor-inicio {
-    background-image: url(imagenes/inicio-background.png);
+    background-image: url(imagenes/Nuevas/fondoMenu.jpg);
 }
 .contenedor-puntuaciones {
     background-image: url(imagenes/puntuaciones-background.png);
@@ -69,7 +69,7 @@ a {
     background-image: url(imagenes/pausa-background.png);
 }
 .contenedor-config {
-    background-image: url(imagenes/BACKGROUND-IMG.png);
+    background-image: url(imagenes/Nuevas/fondoConfiguraciones.jpg);
 }
 
 .contenedor-logo {
@@ -92,8 +92,7 @@ a {
 .contenedor-logoConfig {
     display: flex;
     justify-content: center;
-    margin-bottom: 4em;
-    padding-top: 3em;
+    padding-top: 1em;
 }
 .logoConfig {
     width: 1000px;
@@ -267,3 +266,9 @@ cursor: auto;
     margin-left: 10px;
     text-align: center;
 }
+.jersey-15-regular {
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  

@@ -77,28 +77,33 @@ async function login() {
 }
 
 async function loginFB() {
-    await signInWithPopup(auth, providerFB)
-        .then((result) => {
-            console.log(result);
-            const credentialFB = FacebookAuthProvider.credentialFromResult(result);
-            const tokenFB = credentialFB.accessToken;
-            // The signed-in user info.
-            currentUser = result.user;
-            writeUserData(currentUser.uid, 5, 0);
-            
-            localStorage.setItem('currentPlayer', currentUser.uid)
-            localStorage.setItem('currentPlayerName', currentUser.displayName)
+    if (isAuthenticating) {
+        console.log('Ya se está procesando una solicitud de autenticación.');
+        return;
+    }
+    isAuthenticating = true;
+    buttonLoginFB.disabled = true;  // Disable the login button
 
-            statsPlayer.uid = currentUser.uid
-            statsPlayer.name = currentUser.displayName
-            statsPlayer.pts = 0
-            statsPlayer.inventory = { items : [], dishes : []}
-
-            printStats()
-            location.href = location.href;
-        }).catch((error) => {
-            console.log(error);
-        });
+    try {
+        const result = await signInWithPopup(auth, providerFB);
+        const credentialFB = FacebookAuthProvider.credentialFromResult(result);
+        const tokenFB = credentialFB.accessToken;
+        currentUser = result.user;
+        writeUserData(currentUser.uid, 5, 0);
+        localStorage.setItem('currentPlayer', currentUser.uid);
+        localStorage.setItem('currentPlayerName', currentUser.displayName);
+        statsPlayer.uid = currentUser.uid;
+        statsPlayer.name = currentUser.displayName;
+        statsPlayer.pts = 0;
+        statsPlayer.inventory = { items: [], dishes: [] };
+        printStats();
+        location.href = location.href;
+    } catch (error) {
+        console.log(error);
+    } finally {
+        isAuthenticating = false;
+        buttonLoginFB.disabled = false;  // Enable the login button
+    }
 }
 
 const currentPlayer = localStorage.getItem('currentPlayer');

@@ -5,7 +5,8 @@
 	<style>
 		*{
 			
-			font-family: 'Titan One', cursive;
+			font-family: "Jersey 15", sans-serif;
+			font-size: 20px;
 		}
 		body { margin: 0; }
 		#gameplay-container {
@@ -101,7 +102,7 @@
 		}
 		
 		.contenedor-config {
-    background-image: url(imagenes/BACKGROUND-IMG.png);
+    background-image: url(imagenes/Nuevas/fondoConfiguraciones.jpg);
 	margin-left: 17%;
 }
 		.contenedor-logoConfig {
@@ -126,13 +127,13 @@
 		}
 		.button-ui {
     appearance: button;
-    background-color: #a7a6d9 !important;
+    background-color: #31E354 !important;
     border: 0px;
     box-sizing: border-box;
     color: #FFFFFF;
     cursor: pointer;
     display: inline-block;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: bold;
     letter-spacing: 3px;
     line-height: 20px;
@@ -180,7 +181,7 @@
     width: 20px;
     height: 20px;
     background-color: #FFFFFF;
-    border: 2px solid #e91e63;
+    border: 2px solid #391ee9;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -198,7 +199,7 @@
     background-color: #f0f0f0;
 }
 .slider progress::-webkit-progress-value{
-    background-color: #e91e63;
+    background-color: #391ee9;
 }
 .sliderValueMusica{
     width: 28px;
@@ -215,6 +216,9 @@
 	</style>
 	<script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
 	<link rel="stylesheet" href="https://unpkg.com/claymorphism-css/dist/clay.css"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
 
 	<script type="importmap">
 		{
@@ -261,12 +265,12 @@
 			<ul id="items-list"></ul>
 		</div>
 		<!-- GAME OVER -->
-		<div id="contenedor-game-over" class="gameplay-alert" style="display: none; background-image: url(imagenes/puntuaciones-background.png); color:#79582a;">
+		<div id="contenedor-game-over" class="gameplay-alert" style="display: none; background-image: url(imagenes/Nuevas/fondo_principal_provisional.jpg); color:rgb(3, 4, 3);">
 			<div class="contenido-game-over">
 				<img src="imagenes/titulo-puntuaciones.png" alt="" width="600px">
 				<br>
-				<div class="clay" style="background-color:#fab659;padding: 70px;">
-				<h1>Terminó el juego</h1>
+				<div class="clay" style="background-color:#a333df;padding: 70px;">
+				<h1>El Juego Ha Finalizado</h1>
 				<div id="SinglePlayer">
 					<h2>Puntuacion final: <span id="puntuacion-final"></span></h2>
 					<h2><span id="HighScore"></span></h2>
@@ -284,7 +288,7 @@
 		<!-- PAUSA Y CONFIGURACION -->
 		<div id="contenedor-pausa" class="gameplay-alert contenedor-config" style="display: none;">
 			<div class="contenedor-logoConfig">
-				<img src="imagenes/Config.png" alt="" class="logoConfig">
+				<img src="imagenes/Nuevas/Configuracion.png" alt="" class="logoConfig">
 			</div>
 			<div class="contenedor-contenedores-config">
 				<!--
