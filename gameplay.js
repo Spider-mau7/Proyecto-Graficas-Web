@@ -334,7 +334,7 @@ const ingredients = [
 
 const dishes = [
     {
-        "name": "Plato del jugador",
+        "name": "Bolsa del jugador",
         "ingredients": [],
     },
     {
@@ -804,7 +804,7 @@ audioLoader.load("Audio/Musica_fondo.mp3", function(buffer){
     backgroundMusic.setVolume(VolMus);
     backgroundMusic.play();
 })
-audioLoader.load("Audio/basura.wav", function(buffer){
+audioLoader.load("Audio/tirar.mp3", function(buffer){
     trashSound.setBuffer(buffer);
     trashSound.setLoop(false);
     trashSound.setVolume(VolVFX);
@@ -824,17 +824,17 @@ audioLoader.load("Audio/Puntos_dobles.mp3", function(buffer){
     doublepointSound.setLoop(false);
     doublepointSound.setVolume(VolVFX);
 })
-audioLoader.load("Audio/plato.wav", function(buffer){
+audioLoader.load("Audio/mochila.mp3", function(buffer){
     dishSound.setBuffer(buffer);
     dishSound.setLoop(false);
     dishSound.setVolume(VolVFX);
 })
-audioLoader.load("Audio/clientefeliz.wav", function(buffer){
+audioLoader.load("Audio/Success Sound Effect.mp3", function(buffer){
     happySound.setBuffer(buffer);
     happySound.setLoop(false);
     happySound.setVolume(VolVFX);
 })
-audioLoader.load("Audio/tomarorden.wav", function(buffer){
+audioLoader.load("Audio/ok.mp3", function(buffer){
     takeorderSound.setBuffer(buffer);
     takeorderSound.setLoop(false);
     happySound.setVolume(VolVFX);
