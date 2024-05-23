@@ -16,6 +16,15 @@
 			background-color: #33EFFF;
 			padding: 20px;
 		}
+		.no-mostrar{
+			opacity: 0.1;
+		}
+		.notis{
+			position: absolute;
+			background-color: white;
+			padding: 2em;
+			margin: 2em;
+		}
 		.gameplay-alert {
 			position: absolute;
 			background-color: white;
@@ -67,7 +76,7 @@
 		}
 
 		#orders-container {
-			left: 0;
+			left: 1;
 			right: 0;
 			bottom: 0;
 			width: 30%;
@@ -75,7 +84,7 @@
 			margin: 0 auto;
 			padding: 0.4em;
 			margin-bottom: 2em;
-			border-radius: 10%;
+			border-radius: 0%;
 			background-image: url("imagenes/hoja_libreta.png");
 		}
 		#contenedor-game-over {
@@ -253,15 +262,12 @@
 			<h3>Lista de pendientes</h3>
 			<ul id="orders"></ul>
 		</div>
-		<div id="press-button-alert" class="gameplay-alert" style="display: none; background-color:#33EFFF"></div>
-		<div id="item-picked-alert" class="gameplay-alert" style="display: none; background-color:#33EFFF"></div>
-		<div id="inventory" class="gameplay-alert">
-			<h2 style="text-align: center;">Inventario</h2>
-			<h3>Pendiente</h3>
+		<div id="press-button-alert" class="notis" style="display: none; background-color:#33EFFF"></div>
+		<div id="item-picked-alert" class="notis" style="display: none; background-color:#33EFFF"></div>
+		<div id="inventory" class="no-mostrar">
+			
 			<ul id="dishes-list"></ul>
-			<h3>Objetos</h3>
 			<ul id="ingredients-list"></ul>
-			<h3>Power Up</h3>
 			<ul id="items-list"></ul>
 		</div>
 		<!-- GAME OVER -->
