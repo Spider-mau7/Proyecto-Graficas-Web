@@ -250,11 +250,49 @@
 	</script>
 </head>
 <body>
+	<script>
+		window.fbAsyncInit = function() {
+		  FB.init({
+			appId            : '1478944366049356',
+			xfbml            : true,
+			version          : 'v20.0'
+		  });
+
+		};
+
+		function publishToFacebook() {
+            const message = document.getElementById('facebook-message').value;
+            const accessToken = 'EAAVBF5GUuEwBO0ZCUdXN1CpATtJQEftlPrX2Xh7lxcZBQ9xr6TZAPlk3symvN3ZAZBC2mNQsxuLt3GMsoXBveU0vx7SNT5iu6wKK82il0loZCZCwEFjnDirsQN9qm2hZCzQYmLRZABZCFObrkop1rb4OJs3UK0RFmQ059JQiTET9ikPZCw2IKcj7qN2S5gpuNZCw0tkFDzCdtnNw2ktSW2fqRZApvGZCUZD';
+            FB.api(
+                "/260316380493715/feed",
+                "POST",
+                {
+                    message: message,
+                    access_token: accessToken
+                },
+                function (response) {
+                    if (response && !response.error) {
+                        console.log("POST", response);
+						document.getElementById('facebook-message').value = '';
+						alert('¡Publicado exitosamente en Facebook! Gracias por compartir en nuestra pagina :D');
+                    } else {
+                        console.error("error", response);
+						alert('Error al publicar en Facebook. Inténtalo de nuevo.');
+                    }
+                }
+            );
+        }
+	</script>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
 	<button id="button-login">Login</button>
 	<button id="button-logout">Logout</button>
 	<button id="button-loginFB">Login Facebook</button>
 	<button id="button-createRoom">Crear sala</button>
 	<button id="button-joinRoom">Unirse a sala</button>
+	<textarea id="facebook-message" rows="2" cols="50" placeholder="Escribe un mensaje para la pagina de Facebook :D"></textarea>
+    <!--<button id="publish-to-facebook" class="button-ui clay" onclick="publishToFacebook()">Publicar en Facebook</button>-->
+	<button id="publish-to-facebook" onclick="publishToFacebook()">Publicar en Facebook</button>
 	
 	<div id="gameplay-container">
 		<div id="header-menu" class="gameplay-alert clay">
